@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import "./reset.css";
+@import "./header.css";
+@import "./quote.css";
+@import "./slide.css";
+@import "./breakSection.css";
+@import "./info.css";
+@import "./faq.css";
+@import "./footer.css";
+
+body {
+  margin: 0 auto;
+  background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #5f5f5f;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.infoPurple {
+  color: #8d42ff;
+}

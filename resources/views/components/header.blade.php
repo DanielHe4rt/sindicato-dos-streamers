@@ -31,7 +31,6 @@
                                      height="30" alt="img-fluid">
                                 <a class="nav-link" href="#">Olá {{ Auth::user()->twitch_username }}</a>
                             </div>
-
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('profile') }}">Perfil</a>

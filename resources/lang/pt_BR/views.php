@@ -4,8 +4,8 @@ return [
     'locale' => 'Language',
     'landing' => [
         'carousel' => [
-            'streamers' => '<strong>:streamerCount Streamers</strong> assinaram nosso manifesto.',
-            'viewers' => '<strong>:viewerCount viewers</strong> assinaram nosso manifesto.',
+            'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> assinaram nosso manifesto',
+            'viewers' => '<span class="infoPurple">:viewerCount viewers</span> assinaram nosso manifesto',
             'submitted' => 'lorem ipsum',
             'twitterUrl' => 'lorem ipsum',
             'join' => 'lorem ipsum'

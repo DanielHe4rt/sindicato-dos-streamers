@@ -1,0 +1,50 @@
+.line {
+    margin: 5rem 0 2rem 0;
+    color: #aeaeae;
+    opacity: 0.5;
+}
+
+.line:last-child {
+    margin: 2rem 0 3rem 0;
+}
+
+.quote {
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 71%;
+    text-align: center;
+}
+
+.quoteText {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.quoteText:last-child {
+    margin-bottom: 0;
+}
+
+.quoteAuthor {
+    display: inline-block;
+    padding-top: 2rem;
+    font-style: italic;
+    color: #aeaeae;
+}
+
+.quoteAuthor::before {
+    content: "";
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 2px;
+    background: #8d42ff;
+}
+
+.quoteImg {
+    display: grid;
+    justify-items: right;
+}
