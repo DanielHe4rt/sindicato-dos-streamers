@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="{{asset("css/styles.css")}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
+    <meta name="title" content="Sindicato dos Streamers">
+    <meta name="description" content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Sindicato dos Streamers">
+    <meta property="og:description" content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
+    <meta property="og:image" content="{{ asset('images/seo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Sindicato dos Streamers">
+    <meta property="twitter:description" content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
+    <meta property="twitter:image" content="{{ asset('images/seo.png') }}">
   <style>
     .splide__track {
       height: 400px;
@@ -58,7 +74,7 @@
               <img class="imgUser" src="{{ Auth::user()->image }}" alt="img-fluid">
 
               <div class="userInfo">
-                
+
                 <span class="username">{{ Auth::user()->twitch_username }}</span>
                 <span><a class="userProfile" href="{{ route('profile') }}">Perfil</a></span>
                 <span><a class="userProfile" href="{{ route('logout') }}">Sair</a></span>
@@ -100,96 +116,27 @@
   </section>
 
   <section class="container slide">
-    <h1 class="titleSlide">Quem está apoiando a causa?</h1>
-    <p class="textSlide">Streamers que estão assistindo nosso abaixo assinado</p>
+    <h1 class="titleSlide">{{ trans('views.landing.sectionSupport.title') }}</h1>
+    <p class="textSlide">{{ trans('views.landing.sectionSupport.description') }}</p>
 
     <div id="splide" class="container splide">
       <div class="splide__track">
         <ul class="splide__list">
+          @foreach($famousList as $famous)
           <li class="splide__slide">
             <div class="slideCard">
               <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
+                <img class="imgStreamer" src="{{ $famous->image }}">
               </div>
               <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
+                <p class="streamer">{{ $famous->twitch_username }}</p>
+{{--                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">--}}
+                <p class="hoursAgo">
+                    <strong>{{ number_format($famous->views,0, ',','.') }}</strong> followers</i></span>
               </div>
             </div>
           </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide">
-            <div class="slideCard">
-              <div class="headerCard">
-                <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-              </div>
-              <div class="centerCard">
-                <p class="streamer">Danielhe4rt</p>
-                <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-                <p class="hoursAgo">3 horas atrás</span>
-              </div>
-            </div>
-          </li>
+          @endforeach
         </ul>
       </div>
     </div>
@@ -205,29 +152,30 @@
             class="infoImg" height="450"></iframe></div>
 
         <div>
-          <h1 class="infoTitle">"Confia" em uma plataforma que não é transparente? <span class="infoPurple">Veja a
-              resposta da plataforma</span>.</h1>
+          <h1 class="infoTitle">
+              {!! trans('views.landing.sectionVideo.title') !!}
+          </h1>
 
-          <p class="infoText">A Twitch não apresentou nenhum dado que comprova de fato que a mudança vai ser algo bom a
-            longo prazo e também não passou canais que foram testados essa mudança. Veja a resposta da plataforma na
-            entrevista dada no dia 05/09/2021 no canal da <span class="infoPurple">TerraGameOn</span> onde a proposta da
-            live mudou quando Streamers mostraram sua indignação com a mudança, ficou inviável da apresentadora não
-            tocar
-            nesse assunto.</p>
+          <p class="infoText">
+              {!! trans('views.landing.sectionVideo.lead') !!}
+          </p>
         </div>
 
-        <span class="infoText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam beatae debitis et
-          iure saepe sunt tenetur. Corporis cumque fugit ipsa, ipsam iusto, maxime nostrum odio omnis, praesentium
-          ratione tempora.</span>
+{{--        <span class="infoText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam beatae debitis et--}}
+{{--          iure saepe sunt tenetur. Corporis cumque fugit ipsa, ipsam iusto, maxime nostrum odio omnis, praesentium--}}
+{{--          ratione tempora.</span>--}}
       </section>
     </section>
 
     <section class="breakSection">
       <div class="container breakSectionContainer">
         <div class="textBreakContainer">
-          <h2 class="titleBreak">Valor de repasse atualizado, valor de impostos não localizados?</h2>
-          <span class="textBreak">Você tem alguma ideia de onde seus impostos estão indo? Por quê outras plataformas
-            conseguem fazer o isenção dos impostos norte-americanos e a Twitch não?</span>
+          <h2 class="titleBreak">
+              {{ trans('views.landing.sectionTaxes.title') }}
+          </h2>
+          <span class="textBreak">
+            {!! trans('views.landing.sectionTaxes.lead') !!}
+          </span>
         </div>
 
         <div class="breakImg"><img class="breakImg" src="{{asset("images/iS1AQOV.gif")}}"></div>
@@ -238,70 +186,32 @@
       <section class="infoSection">
         <div class="divImg"><img class="infoImg" src="{{asset("images/Rectangle 8.png")}}"></div>
         <div>
-          <h1 class="infoTitle">A comunidade brasileira tem menos valor?</h1>
-
-          <p class="infoText">Nós temos vários streamers conhecidos mundialmente, tais como o lendário <span
-              class="infoPurple">Gaulês</span> que consta hoje na posição de 46º no ranking global da plataforma. Tal
-            como
-            o <span class="infoPurple">loud_coringa</span> que consta como <span class="infoPurple">1º no ranking de
-              GTA:RP</span> conseguindo uma audiência de <span class="infoPurple">110.000</span> viewers simultâneos na
-            parte da madrugada.</p>
-          <p class="infoText">A Twitch Brasil hoje conta com pelo menos 1.600 parceiros na plataforma e não há nenhum
-            indicio de quantos funcionários atendem essa demanda de parceiros. Agora, se colocarmos os streamers
-            afiliados
-            na balança, nós vemos que não há a menor condição de haver um bom atendimento da plataforma dada a
-            quantidade
-            de pessoas atendidas.</p>
+          <h1 class="infoTitle">{{ trans('views.landing.sectionCommunity.title') }}</h1>
+            <div>
+                {!! trans('views.landing.sectionCommunity.lead') !!}
+            </div>
         </div>
       </section>
     </section>
   </main>
 
   <section class="container slide">
-    <h1 class="titleSlide">Últimas assinaturas</h1>
-    <p class="textSlide">Streamers que estão assistindo nosso abaixo assinado</p>
+    <h1 class="titleSlide">{{ trans('views.landing.signatures.title') }}</h1>
+    <p class="textSlide">{{ trans('views.landing.signatures.description') }}</p>
 
     <section class="slideContainer">
+        @foreach($signs as $sign)
       <div class="slideCard">
         <div class="headerCard">
           <img class="imgStreamer" src="{{asset("images/dan.png")}}">
         </div>
         <div class="centerCard">
-          <p class="streamer">Danielhe4rt</p>
+          <p class="streamer">{{ $sign->twitch_username }}</p>
           <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-          <p class="hoursAgo">3 horas atrás</span>
+          <p class="hoursAgo">{{ $sign->signed_at->diffForHumans() }}</span>
         </div>
       </div>
-      <div class="slideCard">
-        <div class="headerCard">
-          <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-        </div>
-        <div class="centerCard">
-          <p class="streamer">Danielhe4rt</p>
-          <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-          <p class="hoursAgo">3 horas atrás</span>
-        </div>
-      </div>
-      <div class="slideCard">
-        <div class="headerCard">
-          <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-        </div>
-        <div class="centerCard">
-          <p class="streamer">Danielhe4rt</p>
-          <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-          <p class="hoursAgo">3 horas atrás</span>
-        </div>
-      </div>
-      <div class="slideCard">
-        <div class="headerCard">
-          <img class="imgStreamer" src="{{asset("images/dan.png")}}">
-        </div>
-        <div class="centerCard">
-          <p class="streamer">Danielhe4rt</p>
-          <img class="imgSlide" src="{{asset("images/Vector.svg")}}">
-          <p class="hoursAgo">3 horas atrás</span>
-        </div>
-      </div>
+    @endforeach
     </section>
   </section>
 
@@ -309,14 +219,9 @@
     <h1 class="titleFaq">Perguntas Frequentes</h1>
 
     <div class="faqQuestion">
-      <h3 class="faqQuestionTitle">Lorem Ipsum dolor sit?</h3>
+      <h3 class="faqQuestionTitle">Nós somos um sindicato?</h3>
 
-      <p class="faqAnswer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue velit suscipit id vivamus
-        nisl tristique turpis. Neque iaculis varius non sed rhoncus tellus id quam. Netus orci suspendisse commodo leo
-        facilisis condimentum posuere aliquam. Morbi tortor ut gravida amet. Tellus commodo blandit enim, sed etiam
-        ultricies suspendisse dolor sit. Pellentesque et libero pretium, velit non quam. Est rhoncus, interdum enim
-        cursus augue. Vitae, dis at id nec. Turpis mollis fermentum scelerisque pellentesque neque. Auctor cursus
-        interdum tortor fringilla nulla vel enim fusce. Ac ac tincidunt habitant pretium velit vivamus sem.</p>
+      <p class="faqAnswer">Não, só usamos esse nome como um simbolo em primeiro momento para iniciar o movimento dos streamers.</p>
     </div>
 
     <div class="faqQuestion">
@@ -362,16 +267,18 @@
   <footer class="footer">
     <section class="container">
       <div class="searchContainer">
-        <h1 class="footerTitle">Saiba se seu <span class="infoPurple">streamer</span> favorito está apoiando a causa!
+        <h1 class="footerTitle">
+            {!! trans('views.landing.sectionSeek.title') !!}
         </h1>
 
-        <p class="footerText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare aliquam
-          fringilla.<br> Suspendisse potenti. Nunc blandit viverra mauris, vel placerat velit finibus et.</p>
-
+        <p class="footerText">
+            {!! trans('views.landing.sectionSeek.description') !!}
+        </p>
+          <form id="seekStreamer">
         <div class="searchBar">
-          <input type="search" class="footerSearch" name="q" aria-label="Procure o seu streamer favorito">
+          <input type="search" class="footerSearch" id="username" aria-label="Procure o seu streamer favorito">
 
-          <button class="footerButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+          <button type="submit" class="footerButton"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
@@ -379,11 +286,12 @@
             </svg>
           </button>
         </div>
+          </form>
 
         <div class="streamerSearch">
-          <img class="footerStreamerImg" src="{{asset("images/dan.png")}}">
-          <p class="streamerFooter">Danielhe4rt</p>
-          <p class="streamerTextFooter">Está apoiando causa</span>
+          <img class="footerStreamerImg" id="seekThumbnail" src="{{asset("images/cinzxa.png")}}">
+          <p class="streamerFooter" id="seekUsername">Pesquisar</p>
+          <p class="streamerTextFooter" id="seekDescription">...</span>
         </div>
       </div>
 
@@ -391,11 +299,11 @@
       <div class="footerContainer">
         <p class="footerBrand">© Sindicato dos Streamers</p>
         <img class="logo" src="{{asset('images/logo.png')}}">
-        <p class="github">GitHub - <span class="infoPurple">Sindicato dos Streamers</span></p>
+        <a href="https://github.com/danielhe4rt/sindicato-dos-streamers" class="github">GitHub - <span class="infoPurple">Sindicato dos Streamers</span></a>
       </div>
     </section>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -412,7 +320,6 @@
 
     });
   </script>
-
   <script>
     let faqDiv = document.querySelectorAll('.faqQuestion');
 
@@ -428,6 +335,26 @@
       divInfo.classList.toggle('userActive');
       userContent.classList.toggle('openMenu');
     })
+  </script>
+  <script>
+      $(document).ready(function() {
+        $("#seekStreamer").submit(function (e) {
+            e.preventDefault();
+            let username = $("#username").val()
+            let url = '{{ route('seek-streamer', ['twitchUsername' => ':username']) }}'.replace(':username', username)
+            $.get(url, function (res) {
+                $("#seekUsername").html(res.twitch_username)
+                $("#seekDescription").html('Followers: ' + res.views)
+                $("#seekThumbnail").attr('src', res.image)
+            }).catch(function(err) {
+                // TODO: verificar status 429 (too many requests) e 422 (unprocessable entity)
+                $("#seekUsername").html('Assinatura não encontrada =/')
+                $("#seekDescription").html('Mande o link do nosso site para o seu streamer favorito!')
+                $("#seekThumbnail").attr('src', '{{ asset('images/vermelhxo.png') }}')
+                console.log(err)
+            })
+        });
+      })
   </script>
 
 </body>

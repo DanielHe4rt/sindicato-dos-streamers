@@ -104,7 +104,7 @@
                     {{ trans('views.landing.sectionTaxes.title') }}
                 </h2>
                 <p class="lead">
-                    {!!   trans('views.landing.sectionTaxes.lead') !!}
+
                 </p>
             </div>
             <div class="col-md-5">
@@ -155,7 +155,7 @@
                 <div class="col-lg-2 text-center">
                     <img src="{{ $famous->image }}" class="img-fluid" style="border-radius: 50%">
                     <h5>{{ $famous->twitch_username }}</h5>
-                    <i><strong>{{ number_format($famous->views,0, ',','.') }}</strong> followers</i>
+                    <i><strong>{{ number_format($famous->views, 0,',','.') }}</strong> followers</i>
                 </div>
             @endforeach
         </div>
