@@ -85,13 +85,13 @@
                 @auth()
                     <a class="button" target="_blank" href="{{ trans('views.landing.carousel.twitterUrl') }}">
                         <i class="fas fa-check"></i>
-
+                        
                         {!! trans('views.landing.carousel.submitted') !!}
                     </a>
                 @endauth
 
                 @guest()
-                    <a class="button" target="_blank" href="{{ app(App\Services\TwitchService::class)->generateLink() }}">
+                    <a class="button" target="_blank" href="{{ trans('views.profile.manifestUrl') }}">
                         <i class="fab fa-twitch"></i>
                         {!! trans('views.landing.carousel.join') !!}
                     </a>

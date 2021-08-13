@@ -14,7 +14,7 @@ return [
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> signed our manifest.',
             'submitted' => 'Thanks for supporting! Click to share on Twitter!',
             'twitterUrl' => 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fsindicatodostreamer.com&text=Eu%20acabei%20de%20assinar%20o%20manifesto%20em%20prol%20dos%20streamers%20da%20@TwitchBR&hashtags=sindicatodostreamer',
-            'join' => 'Log in with Twitch'
+            'join' => 'Download the Manifest'
         ],
         'signatures' => [
             'title' => 'Latest signatures',
@@ -70,7 +70,7 @@ return [
                     'answer' => 'We created the website to collect signatures from all Twitch.tv platform users using OAuth authentication to guarantee the authenticity of the platform, the signatures will be collected and attached to our manifest, which will be forwarded to Twitch. The project is open source on Github for anyone who wants to analyze it.'
                 ],
                 '3' => [
-                    'question' => 'What is the purpose of the platform? ',
+                    'question' => 'Do you want the old price of subs back?',
                     'answer' => 'We created the website to collect signatures from all Twitch.tv platform users using OAuth authentication to guarantee the authenticity of the platform, the signatures will be collected and attached to our manifest, which will be forwarded to Twitch. The project is open source on Github for anyone who wants to analyze it.'
                 ]
             ]
