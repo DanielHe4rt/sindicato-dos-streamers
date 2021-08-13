@@ -109,10 +109,10 @@
                                         </label>
                                         <select class="form-select" id="exampleSelect1" name="terms">
                                             <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>
-                                                {{ trans('views.profile.form.options.yes') }}
+                                                {{ trans('views.profile.form.options.no') }}
                                             </option>
                                             <option value="1" {{ Auth::user()->terms ? 'selected' : '' }}>
-                                                {{ trans('views.profile.form.options.no') }}
+                                                {{ trans('views.profile.form.options.yes') }}
                                             </option>
                                         </select>
                                     </div>
@@ -124,10 +124,10 @@
                                         <select class="form-select" id="exampleSelect1" name="sent_message">
                                             <option value="0"
                                                 {{ !Auth::user()->sent_message ? 'selected' : '' }}>
-                                                {{ trans('views.profile.form.options.yes') }}
+                                                {{ trans('views.profile.form.options.no') }}
                                             </option>
                                             <option value="1" {{ Auth::user()->sent_message ? 'selected' : '' }}>
-                                                {{ trans('views.profile.form.options.no') }}
+                                                {{ trans('views.profile.form.options.yes') }}
                                             </option>
                                         </select>
                                     </div>
