@@ -14,7 +14,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:url" content="https://sindicatostreamer.com/">
     <meta property="og:title" content="Sindicato dos Streamers">
     <meta property="og:description"
         content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
@@ -22,7 +22,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:url" content="https://sindicatostreamer.com/">
     <meta property="twitter:title" content="Sindicato dos Streamers">
     <meta property="twitter:description"
         content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
