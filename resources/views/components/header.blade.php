@@ -34,8 +34,16 @@
                     <span class="username">{{ Auth::user()->twitch_username }}</span>
                     <div class="userInfo">
 
-                        <span><a class="userProfile" href="{{ route('profile') }}">Perfil</a></span>
-                        <span><a class="userProfile" href="{{ route('logout') }}">Sair</a></span>
+                        <span>
+                            <a class="userProfile" href="{{ route('profile') }}">
+                                {{ trans('views.header.profile') }}
+                            </a>
+                        </span>
+                        <span>
+                            <a class="userProfile" href="{{ route('logout') }}">
+                                {{ trans('views.header.logout') }}
+                            </a>
+                        </span>
 
                     </div>
                     <img class="imgUser" src="{{ Auth::user()->image }}" alt="img-fluid">
@@ -49,7 +57,7 @@
                 <a href="{{ app(App\Services\TwitchService::class)->generateLink() }}">
                     <li class="navText twitch">
                         <img class="twitchSvg" src="{{ asset('images/Vector.svg') }}">
-                        <span class="twitchText">Entrar com a twitch</span>
+                        <span class="twitchText">{{ trans('views.header.signin') }}</span>
                     </li>
                 </a>
 

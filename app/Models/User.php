@@ -64,6 +64,6 @@ class User extends Authenticatable
             return $this->attributes['image'];
         }
 
-        return 'https://placehold.it/300x300';
+        return asset('images/cinzxa.png');
     }
 }

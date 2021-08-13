@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="cartaContainer">
-                        <a class="buttonCard att">Carta Aberta</a>
+                        <a class="buttonCard att" href="">Carta Aberta</a>
                         <a class="buttonCard att">Manifesto</a>
                     </div>
 
@@ -90,9 +90,9 @@
                                     @method('PUT')
                                     @csrf
                                     <div class="form-group">
-                                        <label for="exampleSelect1" class="formLabel">Selecione sua ocupaçao?</label>
+                                        <label for="exampleSelect1" class="formLabel">{{ trans('views.profile.form.ocupation') }}</label>
                                         <select class="form-select" id="exampleSelect1" name="role">
-                                            <option>Selecione uma opção</option>
+                                            <option>----------------</option>
                                             <option class="form-option" value="streamer"
                                                 {{ Auth::user()->role == 'streamer' ? 'selected' : '' }}>
                                                 Streamer
@@ -104,48 +104,51 @@
                                         </select>
                                     </div>
                                     <div class="form-group mt-2">
-                                        <label for="exampleSelect1" class="formLabel">Você concorda com a carta
-                                            acima?</label>
+                                        <label for="exampleSelect1" class="formLabel">
+                                            {{ trans('views.profile.form.terms') }}
+                                        </label>
                                         <select class="form-select" id="exampleSelect1" name="terms">
-                                            <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>Não
+                                            <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>
+                                                {{ trans('views.profile.form.options.yes') }}
                                             </option>
-                                            <option value="1" {{ Auth::user()->terms ? 'selected' : '' }}>Sim
+                                            <option value="1" {{ Auth::user()->terms ? 'selected' : '' }}>
+                                                {{ trans('views.profile.form.options.no') }}
                                             </option>
                                         </select>
                                     </div>
-                                    @if (Auth::user()->sent_message)
-                                        <div class="alert alert-success mt-3">Sua mensagem foi enviada!</div>
-                                    @else
-                                        <div class="form-group">
-                                            <label for="exampleSelect1" class="formLabel">Você gostaria de aparecer na
-                                                pagina inicial?</label>
-                                            <select class="form-select" id="exampleSelect1" name="sent_message">
-                                                <option value="0"
-                                                    {{ !Auth::user()->sent_message ? 'selected' : '' }}>Não
-                                                </option>
-                                                <option value="1" {{ Auth::user()->sent_message ? 'selected' : '' }}>
-                                                    Sim
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <small id="emailHelp" class="form-text text-muted">Você pode desmarcar caso
-                                            sinta que a causa não segue mais nos seus ideais.</small>
-                                    @endif
+
+                                    <div class="form-group">
+                                        <label for="exampleSelect1" class="formLabel">
+                                            {{ trans('views.profile.form.landing_spot') }}
+                                        </label>
+                                        <select class="form-select" id="exampleSelect1" name="sent_message">
+                                            <option value="0"
+                                                {{ !Auth::user()->sent_message ? 'selected' : '' }}>
+                                                {{ trans('views.profile.form.options.yes') }}
+                                            </option>
+                                            <option value="1" {{ Auth::user()->sent_message ? 'selected' : '' }}>
+                                                {{ trans('views.profile.form.options.no') }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <small id="emailHelp" class="form-text text-muted">
+                                        {{ trans('views.profile.terms_disclaimer') }}
+                                    </small>
+
 
                                     <button type="submit" class="buttonProfile att">
-                                        Atualizar
+                                        {{ trans('views.profile.form.submit') }}
                                     </button>
                                 </form>
                                 <form action="{{ route('me-delete') }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="buttonProfile delete">
-                                        Apagar Conta
+                                        {{ trans('views.profile.form.erase') }}
                                     </button>
                                 </form>
                                 <small id="emailHelp" class="form-text text-muted">
-                                    Nós respeitamos a LGPD/GDPR e caso você queira apagar sua conta todos os dados
-                                    relacionados serão apagados também!
+                                    {{ trans('views.profile.gdpr_disclaimer') }}
                                 </small>
 
                             </div>
@@ -156,8 +159,8 @@
             <section class="userColumn">
                 <div>
                     <img src="{{ asset('images/User.svg') }}">
-                    <h3 class="titleUserInfo">Configuração de Perfil</h3>
-                    <p class="textUserInfo">Você poderá alterar as suas informações a qualquer momento.</p>
+                    <h3 class="titleUserInfo">{{ trans('views.profile.title') }}</h3>
+                    <p class="textUserInfo">{{ trans('views.profile.description') }}</p>
                 </div>
             </section>
         </section>

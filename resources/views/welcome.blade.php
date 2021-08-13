@@ -190,7 +190,7 @@
 
         <section class="container">
             <section class="infoSection">
-                <div class="divImg"><img class="infoImg" src="{{ asset('images/Rectangle 8.png') }}"></div>
+                <div class="divImg"><img class="infoImg" src="{{ asset('images/gauringa.png') }}"></div>
                 <div>
                     <h1 class="infoTitle">{{ trans('views.landing.sectionCommunity.title') }}</h1>
                     <div>
@@ -209,7 +209,7 @@
             @foreach ($signs as $sign)
                 <div class="slideCard">
                     <div class="headerCard">
-                        <img class="imgStreamer" src="{{ asset('images/dan.png') }}">
+                        <img class="imgStreamer" src="{{ $sign->image }}">
                     </div>
                     <div class="centerCard">
                         <p class="streamer">{{ $sign->twitch_username }}</p>
@@ -222,61 +222,22 @@
     </section>
 
     <section class="container faq">
-        <h1 class="titleFaq">Perguntas Frequentes</h1>
+        <h1 class="titleFaq">{{ trans('views.landing.sectionFaq.title') }}</h1>
 
         <div class="faqQuestion">
-            <h3 class="faqQuestionTitle">Nós somos um sindicato?</h3>
+            <h3 class="faqQuestionTitle">{{ trans('views.landing.sectionFaq.faqList.1.question') }}</h3>
 
-            <p class="faqAnswer">Não, só usamos esse nome como um simbolo em primeiro momento para iniciar o movimento
-                dos streamers.</p>
+            <p class="faqAnswer">
+                {!! trans('views.landing.sectionFaq.faqList.1.answer') !!}
+            </p>
         </div>
 
         <div class="faqQuestion">
-            <h3 class="faqQuestionTitle">Lorem Ipsum dolor sit?</h3>
+            <h3 class="faqQuestionTitle">{{ trans('views.landing.sectionFaq.faqList.2.question') }}</h3>
 
-            <p class="faqAnswer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue velit suscipit id
-                vivamus
-                nisl tristique turpis. Neque iaculis varius non sed rhoncus tellus id quam. Netus orci suspendisse
-                commodo leo
-                facilisis condimentum posuere aliquam. Morbi tortor ut gravida amet. Tellus commodo blandit enim, sed
-                etiam
-                ultricies suspendisse dolor sit. Pellentesque et libero pretium, velit non quam. Est rhoncus, interdum
-                enim
-                cursus augue. Vitae, dis at id nec. Turpis mollis fermentum scelerisque pellentesque neque. Auctor
-                cursus
-                interdum tortor fringilla nulla vel enim fusce. Ac ac tincidunt habitant pretium velit vivamus sem.</p>
-        </div>
-
-        <div class="faqQuestion">
-            <h3 class="faqQuestionTitle">Lorem Ipsum dolor sit?</h3>
-
-            <p class="faqAnswer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue velit suscipit id
-                vivamus
-                nisl tristique turpis. Neque iaculis varius non sed rhoncus tellus id quam. Netus orci suspendisse
-                commodo leo
-                facilisis condimentum posuere aliquam. Morbi tortor ut gravida amet. Tellus commodo blandit enim, sed
-                etiam
-                ultricies suspendisse dolor sit. Pellentesque et libero pretium, velit non quam. Est rhoncus, interdum
-                enim
-                cursus augue. Vitae, dis at id nec. Turpis mollis fermentum scelerisque pellentesque neque. Auctor
-                cursus
-                interdum tortor fringilla nulla vel enim fusce. Ac ac tincidunt habitant pretium velit vivamus sem.</p>
-        </div>
-
-        <div class="faqQuestion">
-            <h3 class="faqQuestionTitle">Lorem Ipsum dolor sit?</h3>
-
-            <p class="faqAnswer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue velit suscipit id
-                vivamus
-                nisl tristique turpis. Neque iaculis varius non sed rhoncus tellus id quam. Netus orci suspendisse
-                commodo leo
-                facilisis condimentum posuere aliquam. Morbi tortor ut gravida amet. Tellus commodo blandit enim, sed
-                etiam
-                ultricies suspendisse dolor sit. Pellentesque et libero pretium, velit non quam. Est rhoncus, interdum
-                enim
-                cursus augue. Vitae, dis at id nec. Turpis mollis fermentum scelerisque pellentesque neque. Auctor
-                cursus
-                interdum tortor fringilla nulla vel enim fusce. Ac ac tincidunt habitant pretium velit vivamus sem.</p>
+            <p class="faqAnswer">
+                {!! trans('views.landing.sectionFaq.faqList.2.answer') !!}
+            </p>
         </div>
     </section>
 

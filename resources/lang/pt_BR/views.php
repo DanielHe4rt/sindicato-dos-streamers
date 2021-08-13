@@ -2,6 +2,11 @@
 
 return [
     'locale' => 'Language',
+    'header' => [
+        'profile' => 'Perfil',
+        'logout' => 'Sair',
+        'signin' => 'Entrar com a Twitch'
+    ],
     'landing' => [
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> assinaram nosso manifesto.',
@@ -64,6 +69,36 @@ return [
         'sectionSeek' => [
             'title' => 'Saiba se seu <span class="infoPurple">streamer</span> favorito está apoiando a causa!',
             'description' => 'Nossa ideia é ser o mais transparente possível, então todos terão a lista de quem apoiou ou não.'
+        ],
+        'sectionFaq' => [
+            'title' => 'Perguntas Frequentes',
+            'faqList' => [
+                '1' => [
+                    'question' => 'Nós somos um sindicato?',
+                    'answer' => 'Não, só usamos esse nome como um simbolo em primeiro momento para iniciar o movimento dos streamers.'
+                ],
+                '2' => [
+                    'question' => 'Qual o intuito da plataforma?',
+                    'answer' => 'Criamos o site para colher assinatura de todos os usuarios da plataforma Twitch.tv ultilzando a autenticação OAuth para garantir a autenticidade da plataforma, as assinaturas serão colhidas e anexadas ao nosso manifesto, que sera encaminhado a Twitch. O projeto tem seu codigo aberto no Github para todos que quiserem analisa-lo.'
+                ]
+            ]
         ]
+    ],
+    'profile' => [
+        'title' => 'Configuração de Perfil',
+        'description' => 'Você poderá alterar as suas informações a qualquer momento.',
+        'form' => [
+            'ocupation' => 'Selecione sua ocupação',
+            'terms' => 'Você concorda com a carta acima?',
+            'landing_spot' => 'Você gostaria de aparecer na pagina inicial?',
+            'options' => [
+                'yes' => 'Sim',
+                'no' => 'Não'
+            ],
+            'submit' => 'Atualizar',
+            'erase' => 'Apagar Conta'
+        ],
+        'terms_disclaimer' => 'Você pode desmarcar caso sinta que a causa não segue mais nos seus ideais.',
+        'gdpr_disclaimer' => 'Nós respeitamos a LGPD/GDPR e caso você queira apagar sua conta todos os dados relacionados serão apagados também!',
     ]
 ];

@@ -2,6 +2,11 @@
 
 return [
     'locale' => '',
+    'header' => [
+        'profile' => 'Profile',
+        'logout' => 'Logout',
+        'signin' => 'Sign in with Twitch'
+    ],
     'landing' => [
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> signed our manifest.',
@@ -47,7 +52,37 @@ return [
         'sectionSeek' => [
             'title' => 'Look if your favorite <span class="infoPurple">streamer</span> is supporting the cause!',
             'description' => 'Our idea is to be as transparent as possible, so everyone will have a list of who supported or not.'
+        ],
+        'sectionFaq' => [
+            'title' => 'FAQ',
+            'faqList' => [
+                '1' => [
+                    'question' => 'Are we a syndicate? ',
+                    'answer' => 'No, we only used this name as a symbol at first to start the streamers movement. '
+                ],
+                '2' => [
+                    'question' => 'What is the purpose of the platform? ',
+                    'answer' => 'We created the website to collect signatures from all Twitch.tv platform users using OAuth authentication to guarantee the authenticity of the platform, the signatures will be collected and attached to our manifest, which will be forwarded to Twitch. The project is open source on Github for anyone who wants to analyze it.'
+                ]
+            ]
         ]
+    ],
+    'profile' => [
+        'title' => 'Your Profile',
+        'description' => 'You can change your information at any time. ',
+        'form' => [
+            'ocupation' => 'Select your occupation',
+            'terms' => 'Do you agree with the letter above? ',
+            'landing_spot' => 'Would you like to appear on the home page?',
+            'options' => [
+                'yes' => 'Yes',
+                'no' => 'No'
+            ],
+            'submit' => 'Update',
+            'erase' => 'Delete Account'
+        ],
+        'terms_disclaimer' => 'You can uncheck if you feel the cause is no longer in line with your ideals. ',
+        'gdpr_disclaimer' => 'We respect LGPD/GDPR and if you want to delete your account all related data will be deleted too! ',
     ]
 ];
 
