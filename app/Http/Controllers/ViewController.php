@@ -27,7 +27,7 @@ class ViewController extends Controller
             ['signed_at', '<>', null],
             ['sent_message', '=', true]
         ])->orderBy('views', 'desc')
-            ->paginate(15);
+            ->paginate(30);
 
         return view('welcome', compact(['streamers', 'viewers', 'signs', 'famousList']));
     }
