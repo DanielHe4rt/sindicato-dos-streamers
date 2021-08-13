@@ -8,6 +8,7 @@ return [
         'signin' => 'Sign in with Twitch'
     ],
     'landing' => [
+        'quote' => 'Did you know that your <span class="infoPurple">Streamer</span> only receives 20% of your sub? Do you pay sub for the streamer or for the platform?',
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> signed our manifest.',
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> signed our manifest.',
@@ -70,6 +71,8 @@ return [
     'profile' => [
         'title' => 'Your Profile',
         'description' => 'You can change your information at any time. ',
+        'manifestUrl' => asset('docs/Manifesto_EN.pdf'),
+        'manifest' => 'Click here to download the Manifest.pdf',
         'form' => [
             'ocupation' => 'Select your occupation',
             'terms' => 'Do you agree with the letter above? ',

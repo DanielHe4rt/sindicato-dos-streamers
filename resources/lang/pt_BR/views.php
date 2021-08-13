@@ -8,6 +8,7 @@ return [
         'signin' => 'Entrar com a Twitch'
     ],
     'landing' => [
+        'quote' => 'Você sabia que o seu <span class="infoPurple">Streamer</span> recebe apenas 20% do valor seu sub? Você paga sub para o streamer ou para a plataforma?',
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> assinaram nosso manifesto.',
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> assinaram nosso manifesto.',
@@ -87,6 +88,8 @@ return [
     'profile' => [
         'title' => 'Configuração de Perfil',
         'description' => 'Você poderá alterar as suas informações a qualquer momento.',
+        'manifestUrl' => asset('docs/Manifesto_PT.pdf'),
+        'manifest' => 'Clique para baixar o PDF do Manifesto',
         'form' => [
             'ocupation' => 'Selecione sua ocupação',
             'terms' => 'Você concorda com a carta acima?',

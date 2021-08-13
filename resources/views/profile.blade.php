@@ -60,8 +60,9 @@
                     </div>
 
                     <div class="cartaContainer">
-                        <a class="buttonCard att" href="">Carta Aberta</a>
-                        <a class="buttonCard att">Manifesto</a>
+                        <a class="buttonCard att" href="{{ trans('views.profile.manifestUrl') }}">
+                            {{ trans('views.profile.manifest') }}
+                        </a>
                     </div>
 
                     <div class="card-body">

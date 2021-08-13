@@ -104,15 +104,10 @@
         <hr class="line">
         <img src="{{ asset('images/quote1.svg') }}">
         <blockquote class="quote">
-            <q class="quoteText">Lorem Manifesto ipsum dolor sit amet, consectetur adipisicing elit. Delectus, <span
-                    class="infoPurple">deserunt</span> doloremque eius facere in incidunt laudantium quas tenetur! <span
-                    class="infoPurple">Aspernatur</span> dolorum ex illo nisi odit perspiciatis quos ratione velit.</q>
-            <q class="quoteText">Lorem Manifesto ipsum dolor sit amet, <span class="infoPurple">consectetur</span>
-                adipisicing
-                elit. Delectus, deserunt doloremque eius facere in incidunt laudantium quas
-                tenetur! Aspernatur dolorum ex illo nisi odit <span class="infoPurple">perspiciatis</span> quos ratione
-                velit.</q>
-            <cite class="quoteAuthor">Picoca - Sindicato dos Streamers.</cite>
+            <q class="quoteText">
+                {!! trans('views.landing.quote') !!}
+            </q>
+            <cite class="quoteAuthor">Picoca.</cite>
         </blockquote>
         <div class="quoteImg">
             <img src="{{ asset('images/quote2.svg') }}">
