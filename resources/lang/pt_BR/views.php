@@ -13,7 +13,7 @@ return [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> assinaram nosso manifesto.',
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> assinaram nosso manifesto.',
             'submitted' => 'Obrigado por apoiar! Clique para compartilhar',
-            'twitterUrl' => 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fsindicatodostreamer.com&text=Eu%20acabei%20de%20assinar%20o%20manifesto%20em%20prol%20dos%20streamers%20da%20@TwitchBR&hashtags=sindicatodostreamer',
+            'twitterUrl' => 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fsindicatodostreamer.com&text=Eu%20acabei%20de%20assinar%20o%20manifesto%20em%20prol%20dos%20streamers%20da%20@TwitchBR&hashtags=TwitchMelhore',
             'join' => 'Baixar Manifesto'
         ],
         'signatures' => [
