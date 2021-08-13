@@ -69,7 +69,11 @@ return [
         ],
         'sectionSeek' => [
             'title' => 'Saiba se seu <span class="infoPurple">streamer</span> favorito está apoiando a causa!',
-            'description' => 'Nossa ideia é ser o mais transparente possível, então todos terão a lista de quem apoiou ou não.'
+            'description' => 'Nossa ideia é ser o mais transparente possível, então todos terão a lista de quem apoiou ou não.',
+            'notFound' => 'Assinatura não encontrada =/',
+            'sendLink' => 'Envie o link da nossa plataforma para seu streamer favorito',
+            'tooManyRequestTitle' => 'Muitas Requisições!',
+            'tooManyRequestDescription' => 'Aguarde um minuto para pesquisar novamente.'
         ],
         'sectionFaq' => [
             'title' => 'Perguntas Frequentes',

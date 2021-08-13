@@ -313,10 +313,17 @@
                     $("#seekDescription").html('Followers: ' + res.views)
                     $("#seekThumbnail").attr('src', res.image)
                 }).catch(function(err) {
-                    // TODO: verificar status 429 (too many requests) e 422 (unprocessable entity)
-                    $("#seekUsername").html('Assinatura não encontrada =/')
+                    console.log(err)
+                    if(err.status === 429) {
+                        $("#seekUsername").html('{{ trans('views.landing.sectionSeek.tooManyRequestTitle') }}')
+                        $("#seekDescription").html('{{ trans('views.landing.sectionSeek.tooManyRequestDescription') }}')
+                        $("#seekThumbnail").attr('src', '{{ asset('images/cinzxa.png') }}')
+                        return;
+                    }
+
+                    $("#seekUsername").html('{{ trans('views.landing.sectionSeek.notFound') }}')
                     $("#seekDescription").html(
-                        'Mande o link do nosso site para o seu streamer favorito!')
+                        '{{ trans('views.landing.sectionSeek.sendLink') }}')
                     $("#seekThumbnail").attr('src', '{{ asset('images/vermelhxo.png') }}')
                     console.log(err)
                 })

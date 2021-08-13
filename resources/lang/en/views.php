@@ -52,7 +52,11 @@ return [
         ],
         'sectionSeek' => [
             'title' => 'Look if your favorite <span class="infoPurple">streamer</span> is supporting the cause!',
-            'description' => 'Our idea is to be as transparent as possible, so everyone will have a list of who supported or not.'
+            'description' => 'Our idea is to be as transparent as possible, so everyone will have a list of who supported or not.',
+            'notFound' => 'Signature not found =/',
+            'sendLink' => 'Send this site to your favorite streamer!',
+            'tooManyRequestTitle' => 'Too Many Requests!',
+            'tooManyRequestDescription' => 'Wait a minute before keep searching.'
         ],
         'sectionFaq' => [
             'title' => 'FAQ',
