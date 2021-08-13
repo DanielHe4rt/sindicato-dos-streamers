@@ -1,85 +1,86 @@
 .slide {
-  padding: 3rem 0;
+    width: 70%;
+    padding: 3rem 0;
 }
 
 .titleSlide {
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 @media (max-width: 576px) {
-  .titleSlide {
-    font-size: 1.5rem;
-  }
+    .titleSlide {
+        font-size: 1.5rem;
+    }
 }
 
 .textSlide {
-  padding: 2rem 0;
-  text-align: center;
-  color: #aeaeae;
+    padding: 2rem 0;
+    text-align: center;
+    color: #aeaeae;
 }
 
 .slideContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding: 2rem 0;
 }
 
 @media (max-width: 1200px) {
-  .slideContainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
+    .slideContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 576px) {
-  .slideContainer {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+    .slideContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 .slideCard {
-  width: 250px;
-  background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 0 0 8px 8px;
-  text-align: center;
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 8px 8px;
+    text-align: center;
 }
 
 .headerCard {
-  background: #8d42ff;
-  height: 80px;
-  padding: 1.5rem 1rem;
-  border-radius: 8px 8px 0 0;
+    background: #8d42ff;
+    height: 80px;
+    padding: 1.5rem 1rem;
+    border-radius: 8px 8px 0 0;
 }
 
 .imgStreamer {
-  width: 150px;
-  border-radius: 50%;
-  position: relative;
-  bottom: -25px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -25px;
 }
 
 .centerCard {
-  display: block;
-  padding: 6rem 0 2rem 0;
-  text-align: center;
+    display: block;
+    padding: 6rem 0 2rem 0;
+    text-align: center;
 }
 
 .streamer {
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
 }
 
 .imgSlide {
-  width: 50px;
-  padding-bottom: 1rem;
+    width: 50px;
+    padding-bottom: 1rem;
 }
 
 .hoursAgo {
-  color: #aeaeae;
+    color: #aeaeae;
 }

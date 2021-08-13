@@ -6,13 +6,21 @@
     padding: 2rem 0;
 }
 
+.headerProfile {
+    background: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
+}
+
 .headerNav {
     padding: 2rem 0;
 }
 
 .headerNav > ul {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 180px 230px;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -21,7 +29,7 @@
         padding: 1rem 0;
     }
     .headerNav > ul {
-        display: flex;
+        grid-template-columns: 1fr 0.3fr 0.3fr;
     }
 }
 
@@ -98,13 +106,64 @@
     }
 }
 
+.navLang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.langContent {
+    display: none;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.lang:last-child {
+    padding-bottom: 0;
+}
+
+.activeLang {
+    display: block;
+    padding: 0.875rem;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.navItemLang,
+.itemLang {
+    color: #8d42ff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .navItemLang {
+        display: none;
+    }
+}
+
+.img-flag {
+    width: 35px;
+    padding-right: 1rem;
+}
+
 .userContent {
     display: grid;
-    grid-template-columns: 80px 200px;
+    grid-template-columns: 150px 55px 20px;
+    align-items: center;
 }
 
 .openMenu {
-    background: #f6f6f6;
+    background: #8d42ff;
     border-radius: 40px;
     box-shadow: 5px 5px 4px 0 rgba(141, 66, 255, 0.25);
 }
@@ -126,9 +185,24 @@
 }
 
 .imgUser {
-    width: 65px;
+    width: 45px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.arrowUser {
+    stroke: #ffffff;
+    width: 20px;
+}
+
+@media (max-width: 576px) {
+    .imgUser {
+        width: 35px;
+    }
+
+    .arrowUser {
+        display: none;
+    }
 }
 
 .userInfo {
@@ -136,30 +210,44 @@
 }
 
 .username {
-    font-style: italic;
+    text-align: right;
+    color: #8d42ff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-right: 1rem;
 }
 
 .userProfile {
-    color: #8d42ff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+}
+
+.menuUserOpen {
+    display: none;
 }
 
 .userActive {
     display: flex;
     gap: 1rem;
-    width: 200px;
+    width: 150px;
     align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 576px) {
+    .username {
+        display: none;
+    }
+
     .userActive {
         position: absolute;
         flex-direction: column;
-        right: -30px;
+        top: 50px;
+        right: -3px;
         width: 130px;
         padding: 1rem 0;
-        background: #f6f6f6;
+        background: #8d42ff;
         border-radius: 4px;
         box-shadow: 5px 5px 4px 0 rgba(141, 66, 255, 0.25);
     }

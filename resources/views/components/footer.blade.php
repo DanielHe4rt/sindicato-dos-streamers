@@ -1,6 +1,6 @@
-<footer class="container">
-    <p class="float-end">
-        <a href="https://github.com/danielhe4rt/sindicato-dos-streamers">Projeto no Github</a>
-    </p>
-    <p>© 2021 Sindicato dos Streamers. Plataforma desenvolvida por <a href="https://twitter.com/danielhe4rt"> danielhe4rt</a></p>
-</footer>
+<div class="footerContainer">
+    <a href="https://github.com/danielhe4rt/sindicato-dos-streamers" class="github infoPurple">Veja o
+        projeto no github</a>
+    <img class="logoFooter" src="{{ asset('images/logo.png') }}">
+    <p class="footerBrand">© Sindicato dos Streamers</p>
+</div>
