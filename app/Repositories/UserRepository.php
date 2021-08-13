@@ -16,9 +16,10 @@ class UserRepository
 
     public function getUserByUsername(string $twitchUsername)
     {
-        $model = $this->model->where(
-            'twitch_username', '=', $twitchUsername
-        )->first();
+        $model = $this->model->where([
+            ['twitch_username', '=', $twitchUsername],
+            ['terms', '=', true] 
+        ])->first();
 
         if (!$model) {
             throw new StreamerNotFoundException();
