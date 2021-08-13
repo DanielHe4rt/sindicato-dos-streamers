@@ -31,6 +31,10 @@ body {
     .container {
         width: 95%;
     }
+
+    .fixed-bottom {
+        display: none;
+    }
 }
 
 .infoPurple {

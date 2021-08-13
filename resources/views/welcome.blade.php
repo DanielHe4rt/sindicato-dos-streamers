@@ -267,11 +267,11 @@
         </div>
     </section>
 
-    {{-- <div class="fixed-bottom">
+    <div class="fixed-bottom">
         <iframe width="100" height="100" src="https://www.youtube.com/embed/QNJL6nfu__Q"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen=""></iframe>
-    </div> --}}
+    </div>
 
     <footer class="footer">
         <section class="container">
