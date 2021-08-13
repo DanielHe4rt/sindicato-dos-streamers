@@ -151,12 +151,14 @@
     <main>
         <section class="container">
             <section class="infoSection">
-                <div class="divIframe"><iframe
-                        src="https://player.twitch.tv?height=500&amp;parent=localhost&amp;referrer=https%3A%2F%2Fsindicatostreamer.com%2F&amp;time=0h40m33s&amp;video=1109252315&amp;width=500"
+                <div class="divIframe">
+                    <iframe
+                        src="https://player.twitch.tv?height=500&amp;parent=sindicatostreamer.com&amp;time=0h40m00s&amp;video=1109252315&amp;width=500"
                         allowfullscreen="" scrolling="no" frameborder="0" allow="autoplay; fullscreen" title="Twitch"
                         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-                        class="infoImg" height="450"></iframe></div>
-
+                        class="infoImg" height="450">
+                    </iframe>
+                </div>
                 <div>
                     <h1 class="infoTitle">
                         {!! trans('views.landing.sectionVideo.title') !!}

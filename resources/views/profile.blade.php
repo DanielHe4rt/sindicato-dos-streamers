@@ -122,6 +122,7 @@
                                             {{ trans('views.profile.form.landing_spot') }}
                                         </label>
                                         <select class="form-select" id="exampleSelect1" name="sent_message">
+                                            <option>------------</option>
                                             <option value="0"
                                                 {{ !Auth::user()->sent_message ? 'selected' : '' }}>
                                                 {{ trans('views.profile.form.options.no') }}
