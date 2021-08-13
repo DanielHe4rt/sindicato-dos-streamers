@@ -80,15 +80,15 @@ return [
             'faqList' => [
                 '1' => [
                     'question' => 'Nós somos um sindicato?',
-                    'answer' => 'Não, ultilizamos esse nome em um primeiro momento para chamar atenção, alem disso não existe mecanismo legal que torne possivel um processo de sindicalização de Streamers, ja que criadores de conteudo não possuem um registro legal como trabalho formal.'
+                    'answer' => 'Não. Utilizamos esse nome em um primeiro momento para chamar atenção. Além disso, não existe mecanismo legal que torne possível um processo de sindicalização de Streamers, já que criadores de conteúdo não possuem um registro legal como trabalho formal.'
                 ],
                 '2' => [
                     'question' => 'Qual o intuito da plataforma?',
-                    'answer' => 'Criamos o site para colher assinatura de todos os usuarios da plataforma Twitch.tv ultilzando a autenticação OAuth para garantir a autenticidade da plataforma, as assinaturas serão colhidas e anexadas ao nosso manifesto, que sera encaminhado a Twitch. O projeto tem seu codigo aberto no Github para todos que quiserem analisa-lo.'
+                    'answer' => 'Criamos o site para colher assinatura de todos os usuários da plataforma Twitch.tv utilizando a autenticação OAuth para garantir a autenticidade da plataforma. As assinaturas serão colhidas e anexadas ao nosso manifesto, que será encaminhado à Twitch. O projeto tem seu código aberto no Github para todos que quiserem analisá-lo.'
                 ],
                 '3' => [
-                    'question' => 'Vocês querem a volta do antigo valor dos subs ?',
-                    'answer' => 'Não, a luta pela localização do valor do sub foi longa, e estamos felizes em poder fornecer acessibilidade ao publico. Buscamos por meio desse movimento uma melhor condição de repasse, tendo em vista que atualmente um streamer com contrato baseline só recebe 20% de toda renda gerada na plataforma.'
+                    'question' => 'Vocês querem a volta do antigo valor dos subs?',
+                    'answer' => 'Não. A luta pela localização do valor do sub foi longa, e estamos felizes em poder fornecer acessibilidade ao público. Buscamos por meio desse movimento uma melhor condição de repasse, tendo em vista que atualmente um streamer com contrato baseline só recebe 20% de toda renda gerada na plataforma.'
                 ]
             ]
         ]
