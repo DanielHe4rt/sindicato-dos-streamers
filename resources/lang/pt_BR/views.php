@@ -87,8 +87,8 @@ return [
                     'answer' => 'Criamos o site para colher assinatura de todos os usuarios da plataforma Twitch.tv ultilzando a autenticação OAuth para garantir a autenticidade da plataforma, as assinaturas serão colhidas e anexadas ao nosso manifesto, que sera encaminhado a Twitch. O projeto tem seu codigo aberto no Github para todos que quiserem analisa-lo.'
                 ],
                 '3' => [
-                    'question' => 'Vocês querem a volta do antigo valor dos subs?',
-                    'answer' => 'No, the fight over the location of the value of the sub has been a long one, and we are happy to be able to provide accessibility to the public. Through this movement, we seek a better transfer condition, considering that currently a streamer with a baseline contract only receives 20% of all income generated on the platform.'
+                    'question' => 'Vocês querem a volta do antigo valor dos subs ?',
+                    'answer' => 'Não, a luta pela localização do valor do sub foi longa, e estamos felizes em poder fornecer acessibilidade ao publico. Buscamos por meio desse movimento uma melhor condição de repasse, tendo em vista que atualmente um streamer com contrato baseline só recebe 20% de toda renda gerada na plataforma.'
                 ]
             ]
         ]
