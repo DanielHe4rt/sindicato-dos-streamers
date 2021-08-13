@@ -5,14 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- Primary Meta Tags -->
     <title>Sindicato dos Streamers</title>
     <meta name="title" content="Sindicato dos Streamers">
@@ -44,10 +40,9 @@
         </div>
     </header>
     <main>
-        <div class="container marketing">
+        <section class="marketing">
             <!-- START THE FEATURETTES -->
-            <hr class="featurette-divider">
-            <div class="row featurette">
+            <section class="container">
                 <div class="card">
 
                     @if ($errors->any())
@@ -59,38 +54,92 @@
                             </ul>
                         </div>
                     @endif
-                    <div class="card-header">Informações do Usuário</div>
+
+                    <div class="col-lg-3 col-12">
+                        <img src="{{ Auth::user()->image }}" class="img-fluid">
+                    </div>
+
+                    <div class="cartaContainer">
+                        <a class="buttonCard att">Carta Aberta</a>
+                        <a class="buttonCard att">Manifesto</a>
+                    </div>
+
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-3 col-12">
-                                <img src="{{ Auth::user()->image }}" class="img-fluid">
-                            </div>
+
                             <div class="col-lg-9 col-12">
                                 <div class="form-group">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Twitch ID</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" readonly="" class="form-control" id="staticEmail"
-                                            value="{{ Auth::user()->twitch_id }}">
-                                    </div>
+                                    <label for="staticEmail" class="formLabel">Twitch ID</label>
+                                    <input type="text" readonly="" class="form-control" id="staticEmail"
+                                        value="{{ Auth::user()->twitch_id }}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="staticEmail" class="formLabel">Email</label>
+                                    <input type="text" readonly="" class="form-control form-email" id="staticEmail"
+                                        value="{{ Auth::user()->email }}">
+
                                 </div>
                                 <div class="form-group">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" readonly="" class="form-control password" id="staticEmail"
-                                            value="{{ Auth::user()->email }}">
-                                    </div>
+                                    <label for="staticEmail" class="formLabel">Username</label>
+                                    <input type="text" readonly="" class="form-control" id="staticEmail"
+                                        value="{{ Auth::user()->twitch_username }}">
+
                                 </div>
-                                <div class="form-group">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" readonly="" class="form-control" id="staticEmail"
-                                            value="{{ Auth::user()->twitch_username }}">
+                                <form action="{{ route('me-update') }}" method="POST">
+                                    @method('PUT')
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="exampleSelect1" class="formLabel">Selecione sua ocupaçao?</label>
+                                        <select class="form-select" id="exampleSelect1" name="role">
+                                            <option>Selecione uma opção</option>
+                                            <option class="form-option" value="streamer"
+                                                {{ Auth::user()->role == 'streamer' ? 'selected' : '' }}>
+                                                Streamer
+                                            </option>
+                                            <option class="form-option" value="viewer"
+                                                {{ Auth::user()->role == 'viewer' ? 'selected' : '' }}>
+                                                Viewer
+                                            </option>
+                                        </select>
                                     </div>
-                                </div>
+                                    <div class="form-group mt-2">
+                                        <label for="exampleSelect1" class="formLabel">Você concorda com a carta
+                                            acima?</label>
+                                        <select class="form-select" id="exampleSelect1" name="terms">
+                                            <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>Não
+                                            </option>
+                                            <option value="1" {{ Auth::user()->terms ? 'selected' : '' }}>Sim
+                                            </option>
+                                        </select>
+                                    </div>
+                                    @if (Auth::user()->sent_message)
+                                        <div class="alert alert-success mt-3">Sua mensagem foi enviada!</div>
+                                    @else
+                                        <div class="form-group">
+                                            <label for="exampleSelect1" class="formLabel">Você gostaria de aparecer na
+                                                pagina inicial?</label>
+                                            <select class="form-select" id="exampleSelect1" name="sent_message">
+                                                <option value="0"
+                                                    {{ !Auth::user()->sent_message ? 'selected' : '' }}>Não
+                                                </option>
+                                                <option value="1" {{ Auth::user()->sent_message ? 'selected' : '' }}>
+                                                    Sim
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <small id="emailHelp" class="form-text text-muted">Você pode desmarcar caso
+                                            sinta que a causa não segue mais nos seus ideais.</small>
+                                    @endif
+
+                                    <button type="submit" class="buttonProfile att">
+                                        Atualizar
+                                    </button>
+                                </form>
                                 <form action="{{ route('me-delete') }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger mt-2">
+                                    <button type="submit" class="buttonProfile delete">
                                         Apagar Conta
                                     </button>
                                 </form>
@@ -102,81 +151,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Informações do Formulário</div>
-                    <div class="card-body">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet consequatur
-                                    corporis explicabo, maiores, molestias quos ratione, reiciendis rem saepe sint sit
-                                    tempora voluptate! Commodi cum eum id ipsa optio.
-                                </p>
-                                <form action="{{ route('me-update') }}" method="POST">
-                                    @method('PUT')
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="exampleSelect1">Selecione sua ocupaçao?</label>
-                                        <select class="form-select" id="exampleSelect1" name="role">
-                                            <option>Selecione uma opção</option>
-                                            <option disabled>---</option>
-                                            <option value="streamer"
-                                                {{ Auth::user()->role == 'streamer' ? 'selected' : '' }}>
-                                                Streamer
-                                            </option>
-                                            <option value="viewer"
-                                                {{ Auth::user()->role == 'viewer' ? 'selected' : '' }}>
-                                                Viewer
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group mt-2">
-                                        <label for="exampleSelect1">Você concorda com a carta acima?</label>
-                                        <select class="form-select" id="exampleSelect1" name="terms">
-                                            <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>Não
-                                            </option>
-                                            <option value="1" {{ Auth::user()->terms ? 'selected' : '' }}>Sim
-                                            </option>
-                                        </select>
-                                        <small id="emailHelp" class="form-text text-muted">Você pode desmarcar caso
-                                            sinta
-                                            que a causa não segue mais nos seus ideais.</small>
-                                    </div>
-                                    @if (Auth::user()->sent_message)
-                                        <div class="alert alert-success mt-3">Sua mensagem foi enviada!</div>
-                                    @else
-                                        <div class="form-group">
-                                            <label for="exampleSelect1">Você gostaria de aparecer na pagina
-                                                inicial?</label>
-                                            <select class="form-select" id="exampleSelect1" name="sent_message">
-                                                <option value="0"
-                                                    {{ !Auth::user()->sent_message ? 'selected' : '' }}>Não
-                                                </option>
-                                                <option value="1" {{ Auth::user()->sent_message ? 'selected' : '' }}>
-                                                    Sim
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <small id="emailHelp" class="form-text text-muted">Você pode desmarcar caso
-                                            sinta
-                                            que a causa não segue mais nos seus ideais.</small>
-                                    @endif
-                                    <button type="submit" class="btn btn-primary mt-2">
-                                        Atualizar
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="mt-2"></div>
-        <footer class="footer">
+            </section>
+            <section class="userColumn">
+                <div>
+                    <img src="{{ asset('images/User.svg') }}">
+                    <h3 class="titleUserInfo">Configuração de Perfil</h3>
+                    <p class="textUserInfo">Você poderá alterar as suas informações a qualquer momento.</p>
+                </div>
+            </section>
+        </section>
+
+        <footer class="footerProfile">
             <section class="container">
                 @yield('footer', View::make('components.footer'))
             </section>
         </footer>
+        <script src="{{ asset('js/modal.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
                 integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>

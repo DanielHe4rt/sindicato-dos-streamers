@@ -82,7 +82,20 @@
                 <h1 class="title">{!! trans('views.landing.carousel.streamers', ['streamerCount' => $streamers]) !!}</h1>
                 <h3 class="subtitle">{!! trans('views.landing.carousel.viewers', ['viewerCount' => $viewers]) !!}</h3>
 
-                <button class="button">Assine agora</button>
+                @auth()
+                    <a class="button" target="_blank" href="{{ trans('views.landing.carousel.twitterUrl') }}">
+                        <i class="fas fa-check"></i>
+
+                        {!! trans('views.landing.carousel.submitted') !!}
+                    </a>
+                @endauth
+
+                @guest()
+                    <a class="button" target="_blank" href="{{ app(App\Services\TwitchService::class)->generateLink() }}">
+                        <i class="fab fa-twitch"></i>
+                        {!! trans('views.landing.carousel.join') !!}
+                    </a>
+                @endguest
             </div>
         </div>
     </header>
@@ -312,6 +325,7 @@
         </section>
     </footer>
 
+    <script src="{{ asset('js/modal.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>
@@ -328,36 +342,6 @@
             }).mount();
 
         });
-    </script>
-    <script>
-        let faqDiv = document.querySelectorAll('.faqQuestion');
-
-        Array.from(faqDiv).map((div) => div.addEventListener('click', () => {
-            div.children[1].classList.toggle('active');
-        }))
-
-        let userImg = document.querySelector('.imgUser');
-        let divInfo = document.querySelector('.userInfo');
-        let userContent = document.querySelector('.userContent');
-        let username = document.querySelector('.username');
-        let langChange = document.querySelector('.navLang');
-        let langContent = document.querySelector('.langContent');
-        let footerButton = document.querySelector('.footerButton');
-        let streamerSearch = document.querySelector('.streamerSearch');
-
-        userContent.addEventListener('click', () => {
-            divInfo.classList.toggle('userActive');
-            userContent.classList.toggle('openMenu');
-            username.classList.toggle('menuUserOpen');
-        });
-
-        langChange.addEventListener('click', () => {
-            langContent.classList.toggle('activeLang')
-        });
-
-        footerButton.addEventListener('click', () => {
-            streamerSearch.classList.add('activeSearch')
-        })
     </script>
     <script>
         $(document).ready(function() {

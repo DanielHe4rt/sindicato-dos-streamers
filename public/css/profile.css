@@ -1,0 +1,196 @@
+.marketing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 992px) {
+    .marketing {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.cartaContainer {
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.card-body {
+    padding-top: 2rem;
+}
+
+.img-fluid {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+    width: 100%;
+}
+
+.formLabel {
+    display: block;
+    background: #fff;
+    color: #5f5f5f;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-align: left;
+    padding-left: 8rem;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .formLabel {
+        padding-left: 5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .formLabel {
+        padding-left: 3rem;
+    }
+}
+
+.form-email {
+    filter: blur(5px);
+}
+
+.form-email:hover {
+    filter: blur(3px);
+}
+
+.form-control {
+    width: 70%;
+    background: none;
+    border: 1px solid #8d42ff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-select {
+    width: 74%;
+    background: none;
+    border: 1px solid #8d42ff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+    .form-select {
+        width: 77%;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-select {
+        width: 80%;
+    }
+}
+
+.form-text {
+    display: block;
+    font-size: 0.75rem;
+    color: #aeaeae;
+    margin: 1.5rem 0;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.infoForm {
+    padding: 1.5rem 0;
+    text-align: left;
+    color: #aeaeae;
+    font-size: 0.75rem;
+}
+
+.buttonProfile {
+    width: 20rem;
+    padding: 1.5rem 0;
+    margin: 1rem 0 0.5rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.buttonCard {
+    width: 12rem;
+    padding: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.buttonCard:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 576px) {
+    .buttonCard {
+        margin-right: 0;
+    }
+}
+
+.att {
+    border: none;
+    background: #8d42ff;
+    color: #fff;
+}
+
+.delete {
+    border: 1px solid #fb3434;
+    background: none;
+    color: #fb3434;
+}
+
+.userColumn {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(47, 19, 114);
+    background: linear-gradient(
+        180deg,
+        rgba(47, 19, 114, 1) 35%,
+        rgba(141, 66, 255, 1) 100%
+    );
+}
+
+.userColumn > div {
+    display: grid;
+    justify-items: center;
+}
+
+@media (max-width: 992px) {
+    .userColumn {
+        display: none;
+    }
+}
+
+.titleUserInfo {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.textUserInfo {
+    font-size: 0.75rem;
+    color: #fff;
+    line-height: 1.5rem;
+}
