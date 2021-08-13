@@ -236,6 +236,14 @@
                 {!! trans('views.landing.sectionFaq.faqList.2.answer') !!}
             </p>
         </div>
+
+        <div class="faqQuestion">
+            <h3 class="faqQuestionTitle">{{ trans('views.landing.sectionFaq.faqList.3.question') }}</h3>
+
+            <p class="faqAnswer">
+                {!! trans('views.landing.sectionFaq.faqList.3.answer') !!}
+            </p>
+        </div>
     </section>
 
     <div class="fixed-bottom">

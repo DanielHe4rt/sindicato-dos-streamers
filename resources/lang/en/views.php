@@ -63,9 +63,13 @@ return [
             'faqList' => [
                 '1' => [
                     'question' => 'Are we a syndicate? ',
-                    'answer' => 'No, we only used this name as a symbol at first to start the streamers movement. '
+                    'answer' => 'No, we used this name at first to draw attention, in addition there is no legal mechanism that makes possible a Streamers syndication process, since content creators do not have a legal registration as a formal work.'
                 ],
                 '2' => [
+                    'question' => 'What is the purpose of the platform? ',
+                    'answer' => 'We created the website to collect signatures from all Twitch.tv platform users using OAuth authentication to guarantee the authenticity of the platform, the signatures will be collected and attached to our manifest, which will be forwarded to Twitch. The project is open source on Github for anyone who wants to analyze it.'
+                ],
+                '3' => [
                     'question' => 'What is the purpose of the platform? ',
                     'answer' => 'We created the website to collect signatures from all Twitch.tv platform users using OAuth authentication to guarantee the authenticity of the platform, the signatures will be collected and attached to our manifest, which will be forwarded to Twitch. The project is open source on Github for anyone who wants to analyze it.'
                 ]
