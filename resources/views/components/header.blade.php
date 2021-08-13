@@ -1,7 +1,7 @@
 <header>
     <nav class="headerNav">
         <ul>
-            <li class="navText arrow"><img class="logo" src="{{ asset('images/logo.png') }}"></li>
+            <li class="navText arrow"><a href="/"><img class="logo" src="{{ asset('images/logo.png') }}"></a></li>
             <div class="navLang">
                 @if (Session::get('locale') === 'pt_BR')
                     <div class="lang">
@@ -46,8 +46,14 @@
                 </div>
             @endauth
             @guest()
-                <li class="navText twitch"><a href="{{ app(App\Services\TwitchService::class)->generateLink() }}">Entrar
-                        com a twitch</a></li>
+                <a href="{{ app(App\Services\TwitchService::class)->generateLink() }}">
+                    <li class="navText twitch">
+                        <img class="twitchSvg" src="{{ asset('images/Vector.svg') }}">
+                        <span class="twitchText">Entrar com a twitch</span>
+                    </li>
+                </a>
+
+
             @endguest
         </ul>
     </nav>

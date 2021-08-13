@@ -19,7 +19,7 @@
 
 .headerNav > ul {
     display: grid;
-    grid-template-columns: 1fr 180px 230px;
+    grid-template-columns: 1fr 180px 250px;
     gap: 1rem;
     align-items: center;
 }
@@ -111,6 +111,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .langContent {
@@ -160,6 +161,7 @@
     display: grid;
     grid-template-columns: 150px 55px 20px;
     align-items: center;
+    cursor: pointer;
 }
 
 .openMenu {
@@ -187,7 +189,6 @@
 .imgUser {
     width: 45px;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .arrowUser {
@@ -262,8 +263,30 @@
     border-radius: 12px;
     text-transform: uppercase;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .button:hover {
     background: #8d42ff;
+}
+
+.twitch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.twitchSvg {
+    width: 25px;
+}
+
+.twitchText {
+    font-size: 0.875rem;
+}
+
+@media (max-width: 576px) {
+    .twitchText {
+        display: none;
+    }
 }

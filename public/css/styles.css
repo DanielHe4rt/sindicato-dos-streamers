@@ -7,6 +7,7 @@
 @import "./info.css";
 @import "./faq.css";
 @import "./footer.css";
+@import "./profile.css";
 
 body {
     margin: 0 auto;

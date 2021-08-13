@@ -3,6 +3,10 @@
     background: #0c101a;
 }
 
+.footerProfile {
+    background: #0c101a;
+}
+
 .searchContainer {
     display: grid;
     justify-items: center;
@@ -90,7 +94,7 @@
     grid-template-columns: 300px 1fr 250px;
     justify-items: center;
     align-items: center;
-    padding: 1rem 0 3rem 0;
+    padding: 2rem 0 3rem 0;
 }
 
 .footerLine {
