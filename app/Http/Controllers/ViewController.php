@@ -22,7 +22,7 @@ class ViewController extends Controller
             ['terms', '=' ,true],
         ])->count();
         $viewers = User::where([
-            ['role', '=' ,'viewers'],
+            ['role', '=' ,'viewer'],
             ['terms', '=' ,true],
         ])->count();
         $communityViews = User::where([
