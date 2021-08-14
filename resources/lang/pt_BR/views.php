@@ -43,9 +43,8 @@ return [
                     e também não passou canais que foram testados essa mudança. <br>
 
                     Veja a resposta da plataforma na entrevista dada no dia 05/09/2021 no canal da
-                    <a class="infoPurple" href="https://twitch.tv/TerraGameOn" target="_blank">TerraGameOn</a>
-                    onde a proposta da live mudou quando Streamers mostraram sua indignação com a mudança,
-                    ficou inviável da apresentadora não tocar nesse assunto. <br>
+                    <a class="infoPurple" href="https://twitch.tv/TerraGameOn" target="_blank">TerraGameOn</a>,
+                    cuja live mostrou a indignação de diversos Streamers com a mudança. <br>
                     ',
             'content' => 'O que fica claro para nós, é que eles não liberaram nenhum dado onde mostra um gráfico
                     dos canais testados. Há a suspeita desse teste apenas  no canal do LOUD Coringa, já que foi o único canal que veio a público com os preços reduzidos

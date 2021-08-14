@@ -145,7 +145,7 @@
                                 <form action="{{ route('me-delete') }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="buttonProfile delete">
+                                    <button id="update" type="submit" class="buttonProfile delete">
                                         {{ trans('views.profile.form.erase') }}
                                     </button>
                                 </form>
@@ -180,7 +180,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
-                let btnSubmit = $(".att")
+                let btnSubmit = $("#update")
                 $("#terms").on('change', function() {
                     if($(this).val() === '1'){
                         btnSubmit.html('{{ trans('views.profile.form.sign') }}')
