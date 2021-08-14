@@ -17,19 +17,30 @@ class ViewController extends Controller
     public function viewLanding(): View
     {
 
-        $streamers = User::where('role', 'streamer')->count();
-        $viewers = User::where('role', 'viewer')->count();
+        $streamers = User::where([
+            ['role', '=' ,'streamer'],
+            ['terms', '=' ,true],
+        ])->count();
+        $viewers = User::where([
+            ['role', '=' ,'viewers'],
+            ['terms', '=' ,true],
+        ])->count();
+        $communityViews = User::where([
+            ['role', '=' ,'streamer'],
+            ['terms', '=' ,true],
+        ])->sum('views');
+
         $signs = User::where('signed_at', '<>', null)
             ->orderBy('signed_at', 'desc')
             ->paginate(4);
 
         $famousList = User::where([
-            ['signed_at', '<>', null],
+            ['terms', '=', true],
             ['sent_message', '=', true]
         ])->orderBy('views', 'desc')
             ->paginate(30);
 
-        return view('welcome', compact(['streamers', 'viewers', 'signs', 'famousList']));
+        return view('welcome', compact(['streamers', 'viewers', 'signs', 'famousList', 'communityViews']));
     }
 
     public function viewProfile(): View

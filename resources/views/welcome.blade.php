@@ -80,7 +80,8 @@
 
             <div class="headerTitle">
                 <h1 class="title">{!! trans('views.landing.carousel.streamers', ['streamerCount' => $streamers]) !!}</h1>
-                <h3 class="subtitle">{!! trans('views.landing.carousel.viewers', ['viewerCount' => $viewers]) !!}</h3>
+                <h2 class="subtitle">{!! trans('views.landing.carousel.viewers', ['viewerCount' => $viewers]) !!}</h2>
+                <h3 class="subtitle" style="text-align: justify;text-align-last: center;">{!! trans('views.landing.carousel.community', ['viewerCount' => number_format($communityViews)]) !!}</h3>
 
                 @auth()
                     <a class="button" target="_blank" href="{{ trans('views.landing.carousel.twitterUrl') }}">

@@ -13,7 +13,8 @@ return [
         'quote' => 'Did you know that your <span class="infoPurple">Streamer</span> only receives 20% of your sub? Do you pay sub for the streamer or for the platform?',
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> signed our manifest.',
-            'viewers' => '<span class="infoPurple">:viewerCount viewers</span> signed our manifest.',
+            'viewers' => '<span class="infoPurple">:viewerCount followers</span> signed our manifest.',
+            'community' => 'The sum of all streamers communities who signed has <span class="infoPurple">:viewerCount </span> followers.',
             'submitted' => 'Thanks for supporting! Click to share on Twitter!',
             'twitterUrl' => 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fsindicatostreamer.com&text=Eu%20acabei%20de%20assinar%20o%20manifesto%20em%20prol%20dos%20streamers%20da%20@TwitchBR&hashtags=TwitchMelhore',
             'read' => 'Read our Manifest',

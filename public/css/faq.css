@@ -1,6 +1,7 @@
 .faq {
     display: grid;
     justify-items: center;
+    cursor:pointer;
 }
 
 .titleFaq {
