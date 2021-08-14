@@ -10,7 +10,7 @@ return [
         'flag' => asset('images/pt_BR.png'),
     ],
     'landing' => [
-        'quote' => "Você sabia que o seu <span class='infoPurple'>Streamer</span> recebe apenas 20% do valor seu sub? Você paga sub para o streamer ou para a plataforma?",
+        'quote' => "Você sabia que o seu <span class='infoPurple'>Streamer</span> recebe apenas 20% do valor do seu sub? Você paga sub para o streamer ou para a plataforma?",
         'carousel' => [
             'streamers' => '<span class="infoPurple">:streamerCount Streamers</span> assinaram nosso manifesto.',
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> assinaram nosso manifesto.',
