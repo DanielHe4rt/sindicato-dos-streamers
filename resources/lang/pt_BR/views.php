@@ -1,11 +1,13 @@
 <?php
 
 return [
-    'locale' => 'Language',
+
     'header' => [
         'profile' => 'Perfil',
         'logout' => 'Sair',
-        'signin' => 'Entrar com a Twitch'
+        'signin' => 'Entrar com a Twitch',
+        'locale' => 'Português',
+        'flag' => asset('images/pt_BR.png'),
     ],
     'landing' => [
         'quote' => "Você sabia que o seu <span class='infoPurple'>Streamer</span> recebe apenas 20% do valor seu sub? Você paga sub para o streamer ou para a plataforma?",
@@ -14,7 +16,7 @@ return [
             'viewers' => '<span class="infoPurple">:viewerCount viewers</span> assinaram nosso manifesto.',
             'submitted' => 'Obrigado por apoiar! Clique para compartilhar',
             'twitterUrl' => 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fsindicatostreamer.com&text=Eu%20acabei%20de%20assinar%20o%20manifesto%20em%20prol%20dos%20streamers%20da%20@TwitchBR&hashtags=TwitchMelhore',
-            'read' => 'Baixar Manifesto',
+            'read' => 'Ler Manifesto',
             'join' => 'Assine o manifesto',
         ],
         'signatures' => [

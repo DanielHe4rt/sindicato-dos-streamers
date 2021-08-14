@@ -1,11 +1,13 @@
 <?php
 
 return [
-    'locale' => '',
+
     'header' => [
         'profile' => 'Profile',
         'logout' => 'Logout',
-        'signin' => 'Sign in with Twitch'
+        'signin' => 'Sign in with Twitch',
+        'locale' => 'English',
+        'flag' => asset('images/en.png'),
     ],
     'landing' => [
         'quote' => 'Did you know that your <span class="infoPurple">Streamer</span> only receives 20% of your sub? Do you pay sub for the streamer or for the platform?',

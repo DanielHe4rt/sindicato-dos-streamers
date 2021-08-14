@@ -3,17 +3,12 @@
         <ul>
             <li class="navText arrow"><a href="/"><img class="logo" src="{{ asset('images/logo.png') }}"></a></li>
             <div class="navLang">
-                @if (Session::get('locale') === 'pt_BR')
-                    <div class="lang">
-                        <img class="img-flag" src="{{ asset('images/pt_BR.png') }}">
-                        <span class="navItemLang">Português</span>
-                    </div>
-                @else
-                    <div class="lang">
-                        <img class="img-flag" src="{{ asset('images/en.png') }}">
-                        <span class="navItemLang">English</span>
-                    </div>
-                @endif
+
+                <div class="lang">
+                    <img class="img-flag" src="{{ trans('views.header.flag') }}">
+                    <span class="navItemLang">{{ trans('views.header.locale') }}</span>
+                </div>
+
                 <div class="langContent">
                     <div class="lang">
                         <img class="img-flag" src="{{ asset('images/pt_BR.png') }}">
