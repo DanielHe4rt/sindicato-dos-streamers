@@ -14,10 +14,10 @@ class MeRepository
             $payload['signed_at'] = Carbon::now();
             if ($payload['role'] == 'streamer' && Auth::user()->views >= 30000)
             Log::channel('discord')->info(sprintf(
-                '[%s] % assinou o manifesto com uma comunidade de %s viewers',
+                '[%s] %s assinou o manifesto com uma comunidade de %s viewers',
                 date('Y-m-d H:i:s'),
                 Auth::user()->twitch_username,
-                Auth::user()->views
+                Auth::user()->views ?? 0
             ));
         }
 
