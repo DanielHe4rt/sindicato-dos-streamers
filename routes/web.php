@@ -26,6 +26,6 @@ Route::middleware(['localization','throttle:60,1'])->group(callback: function() 
     Route::delete('/users/me', [MeController::class, 'deleteUser'])->name('me-delete');
     Route::get('/locale/{locale}', [ViewController::class, 'getLocale'])->name('i18n');
 
-    Route::get('/streamers/{twitchUsername}', [UsersController::class, 'getUser'])->name('seek-streamer')->middleware('throttle:5,1');
+    Route::get('/streamers/{twitchUsername}', [UsersController::class, 'getUser'])->name('seek-streamer')->middleware('throttle:20,1');
     Route::get('/test', [ViewController::class, 'viewTest']);
 });
