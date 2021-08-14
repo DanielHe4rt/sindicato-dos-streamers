@@ -94,7 +94,8 @@ return [
                 'no' => 'No'
             ],
             'submit' => 'Update',
-            'erase' => 'Delete Account'
+            'erase' => 'Delete Account',
+            'sign' => 'Sign',
         ],
         'terms_disclaimer' => 'You can uncheck if you feel the cause is no longer in line with your ideals. ',
         'gdpr_disclaimer' => 'We respect LGPD/GDPR and if you want to delete your account all related data will be deleted too! ',

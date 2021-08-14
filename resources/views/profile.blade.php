@@ -105,10 +105,10 @@
                                         </select>
                                     </div>
                                     <div class="form-group mt-2">
-                                        <label for="exampleSelect1" class="formLabel">
+                                        <label for="terms" class="formLabel">
                                             {{ trans('views.profile.form.terms') }}
                                         </label>
-                                        <select class="form-select" id="exampleSelect1" name="terms">
+                                        <select class="form-select" id="terms" name="terms">
                                             <option value="0" {{ !Auth::user()->terms ? 'selected' : '' }}>
                                                 {{ trans('views.profile.form.options.no') }}
                                             </option>
@@ -177,6 +177,19 @@
                 integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                let btnSubmit = $(".att")
+                $("#terms").on('change', function() {
+                    if($(this).val() === '1'){
+                        btnSubmit.html('{{ trans('views.profile.form.sign') }}')
+                        return;
+                    }
+                    btnSubmit.html('{{ trans('views.profile.form.submit') }}')
+                })
+            });
+        </script>
     </main>
 </body>
 

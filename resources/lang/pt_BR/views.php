@@ -111,6 +111,7 @@ return [
                 'no' => 'Não'
             ],
             'submit' => 'Atualizar',
+            'sign' => 'Assinar',
             'erase' => 'Apagar Conta'
         ],
         'terms_disclaimer' => 'Você pode desmarcar caso sinta que a causa não segue mais nos seus ideais.',
