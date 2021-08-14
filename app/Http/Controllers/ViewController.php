@@ -11,7 +11,7 @@ class ViewController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['viewLanding', 'viewTest', 'getLocale']);
+        $this->middleware('auth')->except(['viewLanding',  'getLocale']);
     }
 
     public function viewLanding(): View

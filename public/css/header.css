@@ -290,3 +290,9 @@
         display: none;
     }
 }
+
+.botoesFodas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
