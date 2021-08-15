@@ -92,7 +92,19 @@ return [
                 '3' => [
                     'question' => 'Vocês querem a volta do antigo valor dos subs?',
                     'answer' => 'Não. A luta pela localização do valor do sub foi longa, e estamos felizes em poder fornecer acessibilidade ao público. Buscamos por meio desse movimento uma melhor condição de repasse, tendo em vista que atualmente um streamer com contrato baseline só recebe 20% de toda renda gerada na plataforma.'
-                ]
+                ],
+                '4' => [
+                    'question' => 'O que estamos reivindicando?',
+                    'answer' => '
+                            <p>Isenção dos 30% de impostos pagos ao governo Norte Americano para que o repasse seja mais JUSTO aos Streamers;</p><br>
+                            <p>Transparência dos canais onde foram testados o novo preço do sub em cada país/região;</p><br>
+                            <p>
+                                Gráficos de progressão na dashboard do usuário com DADOS citados pelo Phil Chaves na entrevista da TerraGameOn para que possamos
+                                entender o quão longe estamos da nossa renda anterior à mudança;
+                            </p><br>
+                            <p>Melhores condições para a STAFF da Twitch BR incrementar as pessoas da sua equipe.</p>
+                    '
+                ],
             ]
         ]
     ],

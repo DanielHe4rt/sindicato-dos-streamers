@@ -76,6 +76,18 @@ return [
                 '3' => [
                     'question' => 'Do you want the old price of subs back?',
                     'answer' => 'No, the fight over the location of the value of the sub has been a long one, and we are happy to be able to provide accessibility to the public. Through this movement, we seek a better transfer condition, considering that currently a streamer with a baseline contract only receives 20% of all income generated on the platform.'
+                ],
+                '4' => [
+                    'question' => 'What are we claiming?',
+                    'answer' => "
+                            <p>Exemption from 30% of taxes paid to the US government to get a fair transfer for the Streamer;</p><br>
+                            <p>Transparency of channels where the new sub price was tested in each country/region ;</p><br>
+                            <p>
+                                User dashboard progression graphs with DATA cited by Phil Chaves in the TerraGameOn
+                                 interview so we can understand how far we are from our pre-change income;
+                            </p><br>
+                            <p>Better conditions for Twitch BR\'s STAFF and all other branches to increase the people on their team.</p>
+                    "
                 ]
             ]
         ]
