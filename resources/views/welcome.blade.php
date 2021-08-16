@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sindicato dos Streamers</title>
+    <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-    <meta name="title" content="Sindicato dos Streamers">
+    <meta name="title" content="União dos Streamers">
     <meta name="description" content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
 
     <!-- Open Graph / Facebook -->

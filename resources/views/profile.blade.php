@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Primary Meta Tags -->
-    <title>Sindicato dos Streamers</title>
+    <title>Profile - {{ config('app.name') }}</title>
     <meta name="title" content="Sindicato dos Streamers">
     <meta name="description" content="Comunidade de streamers com o intuito de melhorias para a plataforma Twitch.tv">
 
