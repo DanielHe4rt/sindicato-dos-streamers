@@ -114,7 +114,6 @@
             <q class="quoteText">
                 {!! trans('views.landing.quote') !!}
             </q>
-            <cite class="quoteAuthor">Picoca.</cite>
         </blockquote>
         <div class="quoteImg">
             <img src="{{ asset('images/quote2.svg') }}">
