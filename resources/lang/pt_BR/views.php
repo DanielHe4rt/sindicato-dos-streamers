@@ -17,7 +17,7 @@ return [
                     IMPOSTO de 30%
                 </a>
                 que os streamers devem pagar ao governo dos Estados Unidos que é descontado na fonte de cada sub dado ao streamer. <br>
-                A separação padrão é 50%/50%: metade para Twitch e a outra metade para o streamer, e com o desconto de 30%, sobram 35% do total para o streamer. <br>
+                A separação padrão é 50%/50%: metade para Twitch e a outra metade para o streamer, e com o desconto de 30%, sobram 20% do total para o streamer. <br>
                 O imposto sempre existiu, mas com o valor antigo e o valor do prime atrelado ao Tier 1, havia a possibilidade do pequeno/médio streamer ter uma renda. <br>
                 Com a diminuição do valor e o repasse se mantendo, isso deixou de ser opção. O objetivo não é aumentar os valores pro anterior, mas sim mudar o
                 repasse e a possibilidade da isenção/redução desse imposto, pois, com o pagamento localizado em real, não faz sentido o dinheiro sair do Brasil,
