@@ -17,7 +17,7 @@ return [
                     IMPOSTO de 30%
                 </a>
                 que os streamers devem pagar ao governo dos Estados Unidos que é descontado na fonte de cada sub dado ao streamer. <br>
-                A separação padrão é 50%/50%: metade para Twitch e a outra metade para o streamer, e com o desconto de 30%, sobram 20% do total para o streamer. <br>
+                A separação padrão é 50%/50%: metade para Twitch e a outra metade para o streamer, e com o desconto de 30%, sobram 35% do total para o streamer. <br>
                 O imposto sempre existiu, mas com o valor antigo e o valor do prime atrelado ao Tier 1, havia a possibilidade do pequeno/médio streamer ter uma renda. <br>
                 Com a diminuição do valor e o repasse se mantendo, isso deixou de ser opção. O objetivo não é aumentar os valores pro anterior, mas sim mudar o
                 repasse e a possibilidade da isenção/redução desse imposto, pois, com o pagamento localizado em real, não faz sentido o dinheiro sair do Brasil,
@@ -44,8 +44,7 @@ return [
                     Algo comum ao se receber um valor pago por uma plataforma estrangeira é o pagamento de alíquota ao governo
                     do pais sede da plataforma, porem muitas plataformas relativamente novas no pais ja possuem uma alternativa
                     a essa alíquota, no caso da Twitch o Streamer deve pagar 30% do valor do Sub ao governo Norte Americano diferente de plataformas
-                    como TikTok, Youtube, Facebook que ja possuem uma isenção desse imposto, a divisão da Twitch nesse sentido se torna praticamente 80%/20%
-                    em relação Empresa-Governo/Produtor de conteúdo. Porque a Twitch não consegue fazer essa isenção?
+                    como TikTok, Youtube, Facebook que ja possuem uma isenção desse imposto. Porque a Twitch não consegue fazer essa isenção?
             '
         ],
         'sectionVideo' => [

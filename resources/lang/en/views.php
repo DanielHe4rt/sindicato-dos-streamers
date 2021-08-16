@@ -26,7 +26,9 @@ return [
         ],
         'sectionTaxes' => [
             'title' => 'Changed transfer amount, non-adjusted tax amount?',
-            'lead' => 'Do you have any idea where taxes are going? Why are other platforms able to exempt from US taxes and Twitch is not?'
+            'lead' => 'Do you have any idea where taxes are going? Why are other platforms able to exempt from US taxes and Twitch is not?
+            Something common when receiving an amount paid by a foreign platform is the payment of a rate to the government of the country where the platform is hosted, but many relatively new platforms in the country already have an alternative to this rate, in the case of Twitch the Streamer must pay 30% the value of Sub to the North American government different from platforms like TikTok, Youtube, Facebook that already have an exemption from this tax. Why is Twitch unable to make this exemption?
+            '
         ],
         'sectionVideo' => [
             'title' => '"Trust" a platform that is not transparent?
@@ -34,11 +36,7 @@ return [
             'lead' => 'Twitch has not presented any data that proves in fact that the change will be a good thing in the long term and also did not pass channels that were tested for this change.<br>
                     See the platform\'s response in the interview given on 05 / 09 / 2021 on the channel
                     <a href = "https://twitch.tv/TerraGameOn" target = "_blank" > TerraGameOn</a >
-                    where the live proposal changed when Streamers showed their indignation with the change, it was impossible for the presenter not to touch on this subject.',
-            'content' => 'O que fica claro para nós, é que eles não liberaram nenhum dado onde mostra um gráfico
-                    dos canais testados. Há a suspeita desse teste apenas  no canal do <strong>loud_coringa</strong>, já que foi o único canal que veio a público com os preços reduzidos
-                    antes da plataforma formalizar a alteração. A maior dúvida é: será que foi testado em canais pequenos?
-                    Queremos muito que a Twitch mostre esses dados e tenha a maior transparência nesse quesito.'
+                    where the live proposal changed when Streamers showed their indignation with the change, it was impossible for the presenter not to touch on this subject.'
         ],
         'sectionCommunity' => [
             'title' => 'Does the Brazilian community have less value ? ',
