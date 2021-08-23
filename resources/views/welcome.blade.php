@@ -79,6 +79,9 @@
             @yield('header', View::make('components.header'))
 
             <div class="headerTitle">
+                <h1 class="title">Tempo esperando a resposta da Twitch</h1>
+                <h1 class="title" id="timer"></h1>
+                <hr>
                 <h1 class="title">{!! trans('views.landing.carousel.streamers', ['streamerCount' => $streamers]) !!}</h1>
                 <h2 class="subtitle">{!! trans('views.landing.carousel.viewers', ['viewerCount' => $viewers]) !!}</h2>
                 <h3 class="subtitle" style="text-align: justify;text-align-last: center;">{!! trans('views.landing.carousel.community', ['viewerCount' => number_format($communityViews)]) !!}</h3>
@@ -307,6 +310,7 @@
 
     <script src="{{ asset('js/modal.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -324,7 +328,29 @@
         });
     </script>
     <script>
+        function clock() {
+            let now = moment(new Date()); //todays date
+            let end = moment("2021-08-23"); // another date
+            let duration = moment.duration(now.diff(end));
+
+            let seconds = duration.asSeconds();
+            let days = Math.trunc(seconds / 60 / 60 / 24);
+            let hours = Math.trunc(seconds / 60 / 60 - ( 24 * days));
+            let minutes = Math.trunc(seconds / 60 / 60 -  (60 * hours) );
+            minutes = moment.duration(moment()).minutes();
+            seconds = moment.duration(moment()).seconds();
+            if(days === 1) {
+                days = days + " dia";
+            } else {
+                days = days + " dias";
+            }
+            $("#timer").html(`${days}, ${hours} horas, ${minutes} minutos ${seconds} segundos`)
+        }
+        setInterval(() => {
+            clock();
+        },1000)
         $(document).ready(function() {
+
             $("#seekStreamer").submit(function(e) {
                 e.preventDefault();
                 let username = $("#username").val()
